@@ -25,7 +25,7 @@ let conter = 0;
 let clickedCard = 0;
 let infoCard = '';
 let matcher ;
-let choosewrite = 0;
+let chooseTrue = 0;
 
 cards.forEach((card) => {
     card.addEventListener('click', (e) => {
@@ -35,9 +35,9 @@ cards.forEach((card) => {
             if(infoCard == card.getAttribute('data-tec')) {
                 card.classList.add('done');
                 matcher.classList.add('done');
-                choosewrite++;
+                chooseTrue++;
                 //end the game by winning
-                if(choosewrite == 10){
+                if(chooseTrue == 8){
                     win.style.display = 'block';
                 }
                 clickedCard = 0;
@@ -51,7 +51,7 @@ cards.forEach((card) => {
                     })
                 },500);
                 //end the game by losing
-                if(conter >= 10){
+                if(conter >= 8){
                     end.style.display = 'block';
                 }
             }
@@ -59,9 +59,8 @@ cards.forEach((card) => {
             card.classList.toggle('flip');
             infoCard = card.getAttribute('data-tec');
             matcher = card;
-            console.log(card);
         }
-        chances.textContent = `${10 - conter}`;
+        chances.textContent = `${8 - conter}`;
         cont.textContent = `${conter}`;
     })
 })
@@ -82,9 +81,7 @@ function shuffle (array) {
     }
     return array;
 }
-console.log(orderRange);
 shuffle(orderRange);
-console.log(orderRange);
 
 cards.forEach((card, indx) => {
     card.style.order = orderRange[indx];
