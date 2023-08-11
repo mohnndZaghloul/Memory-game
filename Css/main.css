@@ -40,8 +40,8 @@ body{
 }
 @media (max-width: 600px) {
     .card{
-        min-width: 70px;
-        min-height: 70px;
+        min-width: 60px;
+        min-height: 60px;
     }
     body{
         font-size: 10px;
