@@ -51,7 +51,7 @@ cards.forEach((card) => {
                     })
                 },500);
                 //end the game by losing
-                if(conter >= 8){
+                if(conter >= 10){
                     end.style.display = 'block';
                 }
             }
@@ -61,7 +61,7 @@ cards.forEach((card) => {
             matcher = card;
             console.log(card);
         }
-        chances.textContent = `${8 - conter}`;
+        chances.textContent = `${10 - conter}`;
         cont.textContent = `${conter}`;
     })
 })
