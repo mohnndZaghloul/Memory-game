@@ -12,6 +12,7 @@ body{
 }
 .main{
     padding: 40px;
+    margin-top: 80px;
     background-color: #ddd;
     border-radius: 8px;
 }
@@ -36,6 +37,15 @@ body{
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+}
+@media (max-width: 600px) {
+    .card{
+        min-width: 70px;
+        min-height: 70px;
+    }
+    body{
+        font-size: 10px;
+    }
 }
 img{
     width: 100%;
