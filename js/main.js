@@ -37,7 +37,7 @@ cards.forEach((card) => {
                 matcher.classList.add('done');
                 choosewrite++;
                 //end the game by winning
-                if(choosewrite == 8){
+                if(choosewrite == 10){
                     win.style.display = 'block';
                 }
                 clickedCard = 0;
