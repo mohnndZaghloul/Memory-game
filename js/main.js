@@ -20,6 +20,7 @@ const chances = document.querySelector('.chances');
 const cards = Array.from(document.querySelectorAll('.card'));
 const end = document.getElementById('end');
 const win = document.getElementById('win');
+const block = document.querySelector('.block');
 
 let conter = 0;
 let clickedCard = 0;
@@ -42,12 +43,14 @@ cards.forEach((card) => {
                 }
                 clickedCard = 0;
             }else{
+                block.style.display = 'block';
                 conter++;
                 card.classList.toggle('flip');
                 setTimeout(() => {     
                     cards.forEach((item) => {
                         item.classList.remove('flip');
                         clickedCard = 0;
+                        block.style.display = 'none';
                     })
                 },500);
                 //end the game by losing
